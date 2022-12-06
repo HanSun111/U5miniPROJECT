@@ -9,6 +9,8 @@ public class Time {
         s = secs;
     }
 
+    public void addToTime(Object Time){
+    }
     public void tick(){
         s ++;
         if(s >= 60){
