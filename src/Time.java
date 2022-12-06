@@ -9,7 +9,10 @@ public class Time {
         s = secs;
     }
 
-    public void addToTime(Object Time){
+    public void addToTime(Time add){
+        this.s += add.s;
+        this.m += add.m;
+        this.h += add.h;
     }
     public void tick(){
         s ++;
