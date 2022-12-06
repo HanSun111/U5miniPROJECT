@@ -8,4 +8,42 @@ public class Time {
         m = mins;
         s = secs;
     }
+
+    public void tick(){
+        s ++;
+        if(s >= 60){
+            m++;
+            s -= 60;
+        }
+        if(m >= 60){
+            h ++;
+            m -= 60;
+        }
+        if(h >= 24){
+            h -= 24;
+        }
+
+    }
+    public String hourLogic() {
+        if(h < 10){
+            return "0" + h;
+        } return "" + h;
+    }
+
+    public String minuteLogic() {
+        if(m < 10){
+            return "0" + m;
+        } return "" + m;
+
+    }
+
+    public String secondLogic() {
+        if(s < 10){
+            return "0" + s;
+        } return "" + s;
+    }
+
+    public String toString(){
+        return hourLogic() + ":" + minuteLogic() + ":" + secondLogic();
+    }
 }
